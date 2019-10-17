@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {
   addTodo
 } from '../../actions/todoActionCreator';
+import './Form.css';
 
 const Form = (props) => {
   const [text, setText] = useState('');
@@ -19,8 +20,8 @@ const Form = (props) => {
   };
 
   return (
-    <div className="container">
-      <input type="text" value={text} onChange={onChangeHandler}/>
+    <div className="container Form-container">
+      <input className="Form-input" type="text" value={text} onChange={onChangeHandler}/>
       <button onClick={onClickButton}>追加する</button>
     </div>
   );
