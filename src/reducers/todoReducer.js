@@ -5,18 +5,12 @@ import {
 } from '../actions/todoActionCreator';
 import Todo from '../models/Todo';
 
-const initialState = [
-  new Todo('Todoその1'),
-  new Todo('Todoその2'),
-  new Todo('Todoその3'),
-];
-
 /**
  *
  * @param {Array<Todo>} state
  * @param {Object} action
  */
-export const todoReducer = (state = initialState, action) => {
+export const todoReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       const todo = new Todo(action.text);
