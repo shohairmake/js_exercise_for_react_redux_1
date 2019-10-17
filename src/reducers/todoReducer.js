@@ -6,9 +6,9 @@ import {
 import Todo from '../models/Todo';
 
 const initialState = [
-  // new Todo('Todoその1'),
-  // new Todo('Todoその2'),
-  // new Todo('Todoその3'),
+  new Todo('Todoその1'),
+  new Todo('Todoその2'),
+  new Todo('Todoその3'),
 ];
 
 /**
