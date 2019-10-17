@@ -1,6 +1,13 @@
 import Todo from '../../models/Todo';
 
 describe('models/Todo.jsのテスト', () => {
+  it('this._idのgetterを持つ', () => {
+    const text = 'ダミー';
+    const todo = new Todo(text);
+
+    expect( todo.id ).toStrictEqual( todo._id );
+  });
+
   it('this._textのgetterを持つ', () => {
     const text = 'ダミー';
     const todo = new Todo(text);
