@@ -12,9 +12,8 @@ describe('todoReducerのテスト', () => {
     const action = addTodo(dummyText);
     const initialState = [];
     const newState = todoReducer(initialState, action);
-    const todo = new Todo(dummyText);
 
-    expect(newState).toStrictEqual([todo]);
+    expect(newState[0] instanceof Todo).toStrictEqual(true);
   });
 
   it('action.type === DELETE_TODOのとき、index番号の要素を削除した配列を返す', () => {
@@ -27,41 +26,29 @@ describe('todoReducerのテスト', () => {
       state = todoReducer(state, action);
     }
 
-    const todo0 = new Todo(`${prefixText}0`);
-    const todo1 = new Todo(`${prefixText}1`);
-    const todo2 = new Todo(`${prefixText}2`);
-
-    expect(state).toStrictEqual([
-      todo0,
-      todo1,
-      todo2
-    ]);
+    expect(state.length).toStrictEqual(3);
 
     // インデックス番号1を指定して、
     // 「action.type === DELETE_TODO」でreducerを実行
-    const targetIndex = 1;
-    const deleteAction = deleteTodo(targetIndex);
+    const targetTodo = state[1];
+    const deleteAction = deleteTodo(targetTodo.id);
     state = todoReducer(state, deleteAction);
-    expect(state).toStrictEqual([
-      todo0,
-      todo2
-    ]);
+    expect(state.length).toStrictEqual(2);
   });
 
   it('action.type === TOGGLE_TODO_COMPLETEDのとき、index番号の要素を削除した配列を返す', () => {
-    // テスト動作確認用にダミーデータを3件用意
     let state = [];
     const addAction = addTodo('ダミー');
-    const targetIndex = 0;
 
     state = todoReducer(state, addAction);
+    const todo = state[0];
 
-    expect( state[targetIndex].hasCompleted() ).toStrictEqual(false);
+    expect( todo.hasCompleted() ).toStrictEqual(false);
 
-    const toggleAction = toggleTodoCompleted(targetIndex);
+    const toggleAction = toggleTodoCompleted(todo.id);
     state = todoReducer(state, toggleAction);
 
-    expect( state[targetIndex].hasCompleted() ).toStrictEqual(true);
+    expect( todo.hasCompleted() ).toStrictEqual(true);
   });
 });
 
