@@ -13,6 +13,11 @@ const TodoList = (props) => {
 
   return (
     <div>
+      <button onClick={() => {
+        props.addTodo(`Todoその${props.todos.length + 1}`);
+      }}>
+        Todoを追加する
+      </button>
       {todoItems}
     </div>
   );
