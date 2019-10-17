@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import {
   addTodo
 } from '../../actions/todoActionCreator';
-import './Form.css';
 
 const Form = (props) => {
   const [text, setText] = useState('');

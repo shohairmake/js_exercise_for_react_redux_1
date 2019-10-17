@@ -4,6 +4,10 @@ import {
   toggleTodoCompleted,
   deleteTodo
 } from '../../actions/todoActionCreator';
+import {
+  SHOW_ACTIVE,
+  SHOW_COMPLETED,
+} from '../../actions/visibleFilterActionCreator';
 import './TodoList.css';
 
 const TodoList = (props) => {
@@ -51,7 +55,16 @@ const renderDeleteButton = (props, todo) => {
 };
 
 const mapStateToProps = (state) => {
-  return { todos: state.todos };
+  let todos;
+  if (state.visibleFilter === SHOW_ACTIVE) {
+    todos = state.todos.filter(todo => !todo.hasCompleted());
+  } else if (state.visibleFilter === SHOW_COMPLETED) {
+    todos = state.todos.filter(todo => todo.hasCompleted());
+  } else {
+    todos = [...state.todos];
+  }
+
+  return { todos };
 };
 
 const mapDispatchToProps = {
