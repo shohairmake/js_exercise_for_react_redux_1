@@ -1,67 +1,68 @@
-# レポジトリ内容
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-この課題は、Web白熱教室の「React Redux」の課題その1「[【エクササイズ】React Reduxを使ったTodoアプリを作る](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/js-exercise-for-react-redux-1/)」の課題レポジトリになります。
+## Available Scripts
 
-## 完成形(イメージ)
+In the project directory, you can run:
 
+### `npm start`
 
-![](./react-redux-exercise-1-completion.gif)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 今回の課題の目的
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-- 今回の課題では「React Redux」を使いこなせるようになることが目的となる
-- ページのデザインは自由
-    - 凝ったデザインにしても良いし、全くスタイルがあたってなくても良い
-    - あくまでも「React Redux」の理解が最優先事項
-        - つまり「コンポーネント」「コンテナー」の役割を理解して実装しているかが重要
+### `npm test`
 
-## 課題
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-次に挙げる機能は必ず実装すること
+### `npm run build`
 
-- [ ] Todo1件を追加する機能
-- [ ] Todo1件の完了・未完了フラグを切り替える機能
-- [ ] Todo1件を削除する機能
-- [ ] 以下のフィルタリング機能
-    - [ ] 全てのTodoを表示するフィルタリング機能
-    - [ ] 未完了のTodoのみを表示するフィルタリング機能
-    - [ ] 完了済みのTodoのみを表示するフィルタリング機能
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-`answerブランチ` に上に貼った「完成形(イメージ)」のサンプルコード(解答コード)を用意しているが、あくまでもサンプルコードという立ち位置で、サンプルコードと全く同じ構成・実装である必要は無い
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### 実装のヒント
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- 「[React Reduxを学習するための事前準備をする【救済措置あり】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/setup-react-redux-env/)」のコードを元に実装を始めても良い
+### `npm run eject`
 
-## 実装→レビュー依頼の流れ
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-1. [Git Flow](https://qiita.com/KosukeSone/items/514dd24828b485c69a05) で開発をすすめること
-1. コードレビュー依頼はfeatureブランチ単位で提出すること
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-上記の流れで開発を進めることで、実装を開始する前にどんなタスクが必要かを洗い出すことになるため、設計力も鍛えられる。
-(「タスクを洗い出す→実装戦略をたてる→実装を進める→レビュー依頼を出す」の流れ)
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## 参考記事
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-課題をこなしていて、行き詰まったら以下の資料を参考にしていただければ解答にたどり着けるかと思います。
+## Learn More
 
-- Web白熱教室
-    - Redux関連
-        - [Reduxとは【ReactとReduxの役割の比較】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/what-is-the-redux/)
-        - [ReduxとReactのデータの流れを図を使って理解する](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/understand-data-flow-of-redux-and-react/)
-        - [【Redux】Actionsとは](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/what-is-the-actions-in-redux/)
-        - [【Redux】Actionsのテストの書き方を覚える](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/how-to-write-tests-for-actioins-in-redux/)
-        - [【Redux】Reducersとは](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/what-is-the-reducers-in-redux/)
-        - [【Redux】Reducersのテストの書き方を覚える](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/how-to-write-tests-for-reducers-in-redux/)
-        - [【Redux】Storeとは(ActionとReducerの連携含む)](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/what-is-the-store-in-redux/)
-        - [【Redux】Storeのテストの書き方を覚える](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/how-to-write-tests-for-store-in-redux/)
-    - React Redux関連
-        - [React Reduxとは【図解付き】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/what-is-the-react-redux/)
-        - [React Reduxを学習するための事前準備をする【救済措置あり】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/setup-react-redux-env/)
-        - [【React Redux】コンポーネントとコンテナーの役割の違いを比較する](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/compare-presentational-and-container-components/)
-        - [【React Redux】コンテナーの作り方](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/how-to-create-container-components/)
-        - [【React Redux】ProviderでコンテナーにStoreを渡す](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/use-provider-in-react-redux/)
-        - [Redux DevToolsでReduxの動きをブラウザで確認する](https://tsuyopon.xyz/learning-contents/web-dev/javascript/react/how-to-use-redux-devtools/)
-- 公式ドキュメント
-    - [Redux](https://redux.js.org/)
-    - [React Redux](https://react-redux.js.org/)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
